@@ -1,16 +1,10 @@
 package org.camunda.bpm.getstarted.loanapproval;
 
-import org.camunda.bpm.BpmPlatform;
 import org.camunda.bpm.engine.delegate.DelegateExecution;
-import org.camunda.bpm.engine.delegate.DelegateVariableMapping;
 import org.camunda.bpm.engine.delegate.JavaDelegate;
-import org.camunda.bpm.engine.delegate.VariableScope;
-import org.camunda.bpm.engine.variable.VariableMap;
 import org.camunda.bpm.getstarted.loanapproval.utils.ProcessUtil;
 
 import java.util.Arrays;
-import java.util.HashMap;
-import java.util.List;
 import java.util.Map;
 import java.util.logging.Logger;
 
@@ -26,8 +20,6 @@ public class ProcessRequestDelegate implements JavaDelegate{
         execution.setVariable("myVarStr", "some_string");
 
         Map<String, String> extensionsElements = ProcessUtil.getExtensionsPropertiesElements(execution);
-
-        Map<String, Student> map = new HashMap<>();
 
         Student student = new Student("Bob", 21, Arrays.asList("s1", "s2", "s3"));
 

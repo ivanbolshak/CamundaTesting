@@ -6,7 +6,7 @@
         <camunda:property name="task" value="processElement" />
       </camunda:properties>
     </bpmn:extensionElements>
-    <bpmn:startEvent id="StartEvent_1" name="Loan Request Received" camunda:formKey="embedded:app:forms/request-loan.html">
+    <bpmn:startEvent id="StartEvent_1" name="Loan Request Received">
       <bpmn:outgoing>SequenceFlow_10dxfd2</bpmn:outgoing>
     </bpmn:startEvent>
     <bpmn:sequenceFlow id="SequenceFlow_10dxfd2" sourceRef="StartEvent_1" targetRef="Task_06rkjw0" />
@@ -18,12 +18,13 @@
       <bpmn:extensionElements>
         <camunda:properties>
           <camunda:property name="task2" value="testExtension2" />
+          <camunda:property name="task2_2" value="testExtensionSecondAtribute" />
         </camunda:properties>
       </bpmn:extensionElements>
       <bpmn:incoming>SequenceFlow_16q8shv</bpmn:incoming>
       <bpmn:outgoing>SequenceFlow_085mazr</bpmn:outgoing>
     </bpmn:serviceTask>
-    <bpmn:userTask id="Task_06rkjw0" name="Approve Loan" camunda:formKey="embedded:app:forms/approve-loan.html" camunda:assignee="ivan">
+    <bpmn:userTask id="Task_06rkjw0" name="Approve Loan" camunda:assignee="ivan">
       <bpmn:extensionElements>
         <camunda:properties>
           <camunda:property name="task1" value="testExtension" />
